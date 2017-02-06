@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 <style media="screen">
   label{
+    font-size: 14px;
     font-weight: bold;
   }
   .tweet{
@@ -27,8 +28,8 @@
     border: none;
   }
   .thumbnail>img{
-    width: 50px;
-    height:50px;
+    width: 100px;
+    height:100px;
   }
   @media only screen and (max-width: 1000px) {
     .side-user,.thumbnail {
@@ -41,8 +42,10 @@
     <div class="side-user col-xs-0 col-md-4">
       <div class="container-fluid">
         <div class="info">
-          <img src="" alt="">
-          <h2>Aldo Solorzano</h2><p>@aldo<p>
+          <img src="/aldo.JPG" alt="">
+          <h2>Aldo Solorzano</h2>
+          <p>@aldo<p>
+          <label><%=tweets.length%></label>
           </div>
         </div>
       </div>
@@ -55,7 +58,7 @@
                 <label for="">@aldo</label>
               </div>
               <div class="tweet-textArea">
-                <textarea maxlength="250"name="tweet" rows="4" value=""></textarea>
+                <textarea maxlength="250"name="tweet" rows="4" value="" placeholder=" ...."></textarea>
               </div>
               <div class="">
                 <button class="btn btn-primary" type="submit" name="button" value="submit">Submit</button>
@@ -69,7 +72,7 @@
           <% for(tweet of tweets){ %>
             <div class="row tweet">
               <div class="thumbnail col-md-2">
-                <img src="" alt="">
+                <img class="img-circle"src="/aldo.JPG" alt="">
               </div>
               <div class="col-md-10">
                 <label for="">@aldo</label>
