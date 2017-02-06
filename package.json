@@ -1,0 +1,23 @@
+{
+  "name": "awesomeTweets",
+  "version": "0.0.1",
+  "main": "app.js",
+  "repository": {},
+  "scripts": {
+    "start": "sudo nodemon app.js"
+  },
+  "author": "aldosolorzano",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "path": "^0.12.7",
+    "pg": "^6.1.2",
+    "sweetalert": "^1.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

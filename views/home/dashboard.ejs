@@ -1,0 +1,87 @@
+<%- include('../partials/header') %>
+<style media="screen">
+  label{
+    font-weight: bold;
+  }
+  .tweet{
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid black;
+  }
+  .tweets{
+    margin-bottom: 30px;
+  }
+  .tweet-textArea>textarea{
+    width: 100%;
+  }
+  .info{
+    flex-flow: row;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  .info>img{
+    width:100px;
+    height: 100px;
+  }
+  .thumbnail{
+    border: none;
+  }
+  .thumbnail>img{
+    width: 50px;
+    height:50px;
+  }
+  @media only screen and (max-width: 1000px) {
+    .side-user,.thumbnail {
+        display:none;
+    }
+}
+</style>
+<main class="container-fluid">
+  <div class="row">
+    <div class="side-user col-xs-0 col-md-4">
+      <div class="container-fluid">
+        <div class="info">
+          <img src="" alt="">
+          <h2>Aldo Solorzano</h2><p>@aldo<p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-8 mobile">
+        <div class="container-fluid">
+          <div class="formWrapper">
+            <form class="" action method="post">
+              <div class="username">
+                <label for="">@aldo</label>
+              </div>
+              <div class="tweet-textArea">
+                <textarea maxlength="250"name="tweet" rows="4" value=""></textarea>
+              </div>
+              <div class="">
+                <button class="btn btn-primary" type="submit" name="button" value="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="tweets container-fluid">
+          <% for(tweet of tweets){ %>
+            <div class="row tweet">
+              <div class="thumbnail col-md-2">
+                <img src="" alt="">
+              </div>
+              <div class="col-md-10">
+                <label for="">@aldo</label>
+                  <p><%=tweet[0]%></p>
+                  <p class="text-right"><%=tweet[1]%></p>
+              </div>
+            </div>
+            <%}%>
+          </div>
+        </div>
+
+      </div>
+
+</main>
+<%- include('../partials/footer') %>
