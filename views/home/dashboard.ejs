@@ -15,20 +15,21 @@
     width: 100%;
   }
   .info{
-    flex-flow: row;
     border: 1px solid black;
-    padding: 10px;
   }
-  .info>img{
+  .user-img{
     width:100px;
     height: 100px;
+  }
+  .user-name{
+    padding-left:50px;
   }
   .thumbnail{
     border: none;
   }
   .thumbnail>img{
-    width: 50px;
-    height:50px;
+    width: 100px;
+    height:100px;
   }
   @media only screen and (max-width: 1000px) {
     .side-user,.thumbnail {
@@ -38,14 +39,24 @@
 </style>
 <main class="container-fluid">
   <div class="row">
-    <div class="side-user col-xs-0 col-md-4">
-      <div class="container-fluid">
-        <div class="info">
-          <img src="" alt="">
-          <h2>Aldo Solorzano</h2><p>@aldo<p>
+    <div class="side-user col-md-4">
+
+      <div class="info">
+        <div class="row">
+          <div class="col-md-3">
+            <img class="user-img"src="/aldo.JPG" alt="">
+            <h2 class="text-center"><%=tweetsArr.length%></h2>
           </div>
+
+          <div class="col-md-9 user-name">
+            <h3 >Aldo Solorzano</h3>
+            <p >@aldo<p>
+          </div>
+
         </div>
+
       </div>
+    </div>
 
       <div class="col-xs-12 col-md-8 mobile">
         <div class="container-fluid">
@@ -66,22 +77,19 @@
         </div>
 
         <div class="tweets container-fluid">
-          <% for(tweet of tweets){ %>
+          <% for(tweet of tweetsArr){ %>
             <div class="row tweet">
               <div class="thumbnail col-md-2">
-                <img src="" alt="">
+                <img class="img-circle"src="/aldo.JPG" alt="">
               </div>
               <div class="col-md-10">
                 <label for="">@aldo</label>
-                  <p><%=tweet[0]%></p>
-                  <p class="text-right"><%=tweet[1]%></p>
+                  <p><%=tweet%></p>
               </div>
             </div>
             <%}%>
           </div>
         </div>
-
-      </div>
-
+  </div>
 </main>
 <%- include('../partials/footer') %>
