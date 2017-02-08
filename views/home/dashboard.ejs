@@ -16,6 +16,7 @@
   }
   .info{
     border: 1px solid black;
+    margin-bottom: 10px;
   }
   .user-img{
     width:100px;
@@ -39,24 +40,35 @@
 </style>
 <main class="container-fluid">
   <div class="row">
-    <div class="side-user col-md-4">
+    <div class="side-user col-xs-0 col-md-4">
+      <div class="container-fluid">
+        <div class="info">
+          <div class="row">
+            <div class="col-md-3">
+              <img class="user-img"src="/aldo.JPG" alt="">
+              <h2 class="text-center"><%=tweetsArr.length%></h2>
+            </div>
 
-      <div class="info">
-        <div class="row">
-          <div class="col-md-3">
-            <img class="user-img"src="/aldo.JPG" alt="">
-            <h2 class="text-center"><%=tweetsArr.length%></h2>
-          </div>
+            <div class="col-md-9 user-name">
+              <h3 >Aldo Solorzano</h3>
+              <p >@aldo<p>
+            </div>
 
-          <div class="col-md-9 user-name">
-            <h3 >Aldo Solorzano</h3>
-            <p >@aldo<p>
           </div>
 
         </div>
-
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Trending<h4>
+        </div>
+        <div class="panel-body">
+          <p>#cool_ai</p>
+          <p>#codecore</p>
+          <p>#yvr</p>
+        </div>
       </div>
-    </div>
+        </div>
+      </div>
 
       <div class="col-xs-12 col-md-8 mobile">
         <div class="container-fluid">
