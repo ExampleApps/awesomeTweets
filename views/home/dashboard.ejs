@@ -16,11 +16,11 @@
     width: 100%;
   }
   .info{
-    flex-flow: row;
     border: 1px solid black;
     padding: 10px;
+    margin-bottom: 10px;
   }
-  .info>img{
+  .user-img{
     width:100px;
     height: 100px;
   }
@@ -42,11 +42,30 @@
     <div class="side-user col-xs-0 col-md-4">
       <div class="container-fluid">
         <div class="info">
-          <img src="/aldo.JPG" alt="">
-          <h2>Aldo Solorzano</h2>
-          <p>@aldo<p>
-          <label><%=tweets.length%></label>
+          <div class="row">
+            <div class="col-md-3">
+              <img class="user-img"src="/aldo.JPG" alt="">
+              <h2 class="text-center"><%=tweets.length%></h2>
+            </div>
+
+            <div class="col-md-9 user-name">
+              <h3 >Aldo Solorzano</h3>
+              <p >@aldo<p>
+            </div>
+
           </div>
+
+        </div>
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>Trending<h4>
+        </div>
+        <div class="panel-body">
+          <p>#cool_ai</p>
+          <p>#codecore</p>
+          <p>#yvr</p>
+        </div>
+      </div>
         </div>
       </div>
 
